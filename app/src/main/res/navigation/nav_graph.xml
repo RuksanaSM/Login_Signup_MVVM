@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signoutFragment">
+
+    <fragment
+        android:id="@+id/signoutFragment"
+        android:name="com.example.login_signup_mvvm.views.SignoutFragment"
+        android:label="fragment_signout"
+        tools:layout="@layout/fragment_signout" >
+        <action
+            android:id="@+id/action_signoutFragment_to_signinFragment"
+            app:destination="@id/signinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signinFragment"
+        android:name="com.example.login_signup_mvvm.views.SigninFragment"
+        android:label="fragment_signin"
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/action_signinFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_signinFragment_to_signoutFragment"
+            app:destination="@id/signoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.login_signup_mvvm.views.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_signinFragment"
+            app:destination="@id/signinFragment" />
+    </fragment>
+</navigation>
